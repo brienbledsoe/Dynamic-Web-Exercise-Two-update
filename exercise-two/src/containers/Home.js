@@ -42,8 +42,7 @@ function queryWeatherAPI(queryCity){
 
 
 useEffect(()=> {
-  // queryWeatherAPI('London');
-  // console.log('weather test', queryWeatherAPI('London'));
+
   const urlParams = new URLSearchParams(props.location.search)
   const cityParam = urlParams.get('city') ? urlParams.get('city') : 'London'
   setCity(cityParam);
