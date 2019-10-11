@@ -31,7 +31,7 @@ export default function PageWrapper({clouds, children}) {
         width: '100%',
         minHeight: '100vh',
         minWidth: '100vw',
-        // backgroundColor: `rgba(${updatedCurrentSky}, ${wrapperOpacity})`
+        backgroundColor: `rgba(${updatedCurrentSky}, ${wrapperOpacity})`
 
 
       }}className="PageWrapper red">
