@@ -16,7 +16,7 @@ const [weather, setWeather] = useState({});
 const[weatherType,setWeatherType] = useState('');
 
 function queryWeatherAPI(queryCity){
-  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${queryCity}&APPID=${apiKey}`)
+  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${queryCity}&APPID=${apiKey}&units=imperial`)
 
     .then(function(response){
     console.log('response',response);

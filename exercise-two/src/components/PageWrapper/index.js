@@ -1,4 +1,6 @@
 import React from 'react';
+import VideoMod from '../Videos';
+import Videos from '../Videos'
 export default function PageWrapper({clouds, children}) {
   const wrapperOpacity = clouds ? (clouds * 0.01) : 0;
   const currentSky = "189, 195, 199"
@@ -16,7 +18,10 @@ export default function PageWrapper({clouds, children}) {
       }}className="PageWrapper grey">
       {children}
       <div>
-      <iframe width="420" height="315"
+      <iframe className="youtube-player"
+      type="text/JavaScript"
+      width="420"
+      height="315"
       src="https://youtu.be/FZkc_-DGU14?autoplay=1&loop=1&mute=1">
       </iframe>
       </div>
@@ -37,7 +42,10 @@ export default function PageWrapper({clouds, children}) {
       }}className="PageWrapper red">
       {children}
       <div>
-      <iframe width="420" height="315"
+      <iframe className="youtube-player"
+      type="text/JavaScript"
+      width="420"
+      height="315"
       src="https://youtu.be/3LSZSJJ98x0?autoplay=1&loop=1&mute=1">
       </iframe>
       </div>
