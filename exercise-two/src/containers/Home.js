@@ -16,14 +16,20 @@ const [weather, setWeather] = useState({});
 const[weatherType,setWeatherType] = useState('');
 
 function queryWeatherAPI(queryCity){
-  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${queryCity}&APPID=${apiKey}&units=imperial`)
+  /*Make a request for a user with a given ID, performing a GET request. The Documentation also specified to use my api key when trying
+  to access samples of API documentation, there for I pass the apikey variable which has my actual api key that I was given on the site*/
+  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${queryCity}&units=imperial&APPID=${apiKey}&units=imperial`) /*added the &unites=imperial to api call
+    to convert the temperature into Fahrenheit*/
 
     .then(function(response){
+    /*response is the website response code that returns when we try to access the information (i.e 200 if successful 401 if not)*/
     console.log('response',response);
     if (response.status !== 200){
+      //handeling error
       isError(true);
       setErrorMessage(`${response.status}: ${'Error'}`);
     }else{
+      //handle success
       isSuccess(true);
     }
     setWeather(response);
@@ -32,6 +38,7 @@ function queryWeatherAPI(queryCity){
     })
 
     .catch(function(error){
+      //handling error
     console.log('error',error);
     return error;
     });

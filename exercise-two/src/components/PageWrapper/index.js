@@ -1,6 +1,6 @@
 import React from 'react';
-import VideoMod from '../Videos';
-import Videos from '../Videos'
+import YouTube from 'react-youtube';
+// import Videos from '/Videos/'
 export default function PageWrapper({clouds, children}) {
   const wrapperOpacity = clouds ? (clouds * 0.01) : 0;
   const currentSky = "189, 195, 199"
